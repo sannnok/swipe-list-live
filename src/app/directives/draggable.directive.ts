@@ -1,5 +1,5 @@
-import { Directive, ElementRef, HostListener, Renderer2, TemplateRef } from '@angular/core';
-import { Observable, takeUntil, timer } from 'rxjs';
+import { Directive, ElementRef, HostListener, Renderer2, } from '@angular/core';
+import { timer } from 'rxjs';
 
 @Directive({
   selector: '[appDraggable]'

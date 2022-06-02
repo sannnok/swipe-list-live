@@ -2,12 +2,12 @@
   <div class="nav-container"><h1>Pro Autentic Athletics</h1></div>
 
   <div class="content-container">
-    <app-shopping-card></app-shopping-card>
+    <app-shopping-cart [actionEvents]="actionEvents"></app-shopping-cart>
   </div>
 
   <div class="footer-container">
     <div class="actions">
-      <button class="submit-button" type="submit">Continue</button>
+      <button class="submit-button" type="submit" (click)="onClickContinueAction()">Continue</button>
     </div>
   </div>
 </div>

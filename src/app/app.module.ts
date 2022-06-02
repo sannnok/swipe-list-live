@@ -4,7 +4,7 @@ import { BrowserModule, HammerGestureConfig, HammerModule, HAMMER_GESTURE_CONFIG
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ShoppingCardComponent } from './views/shopping-card/shopping-card.component';
+import { ShoppingCartComponent } from './views/shopping-cart/shopping-cart.component';
 
 // particular imports for hammer
 import * as Hammer from 'hammerjs';
@@ -19,7 +19,7 @@ export class MyHammerConfig extends HammerGestureConfig {
 @NgModule({
   declarations: [
     AppComponent,
-    ShoppingCardComponent,
+    ShoppingCartComponent,
     DraggableDirective
   ],
   imports: [
