@@ -7,16 +7,16 @@ import { Observable, takeUntil, timer } from 'rxjs';
 export class DraggableDirective {
 
   @HostListener('swipeleft', ['$event']) onSwipeLeft($event: any){
-    console.info('swipeleft: ' + $event);
-    this.renderer.addClass(this.el.nativeElement, 'swipe-left');
-    timer(250).subscribe(() => this.renderer.removeClass(this.el.nativeElement, 'swipe-left'));
+    this.toggleClass('swipeleft');
   }
   @HostListener('swiperight', ['$event']) onSwipeRight($event: any){
-    console.info('swiperight: ' + $event);
-    this.renderer.addClass(this.el.nativeElement, 'swipe-right');
-    timer(250).subscribe(() => this.renderer.removeClass(this.el.nativeElement, 'swipe-right'));
+    this.toggleClass('swiperight');
   }
 
   constructor(private renderer: Renderer2, private el: ElementRef) { }
 
+  private toggleClass(action: 'swiperight' | 'swipeleft') {
+    this.renderer.addClass(this.el.nativeElement, action);
+    timer(250).subscribe(() => this.renderer.removeClass(this.el.nativeElement, action));
+  }
 }
