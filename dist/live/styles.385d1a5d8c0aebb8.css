@@ -1,1 +1,0 @@
-html,body,.main-container{height:100%;width:100%;margin:0;padding:0}.swiperight{animation:rightswipe .25s}.swipeleft{animation:leftswipe .25s}@keyframes rightswipe{0%,to{transform:translate(0)}50%{transform:translate(16px)}}@keyframes leftswipe{0%,to{transform:translate(0)}50%{transform:translate(-16px)}}
