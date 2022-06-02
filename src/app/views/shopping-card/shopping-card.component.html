@@ -1,0 +1,7 @@
+<h2 class="view-header">Shopping Card</h2>
+<div class="list-container">
+    <div *ngFor="let item of cardList" class="list-item swipe" (swipeleft)="onSwipeLeft(item)" (swiperight)="onSwipeRight(item)">
+        <span>{{ item.name }}</span>
+        <input type="number" [(ngModel)]="item.quantity">
+    </div>
+</div>

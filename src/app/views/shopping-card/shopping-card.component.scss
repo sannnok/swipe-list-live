@@ -1,0 +1,40 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .view-header {
+        color: darkslategrey;
+    }
+}
+
+.list-container {
+    flex: 1;
+
+    .list-item {
+        width: calc(100% + 64px);
+        border-bottom: 1px solid grey;
+        margin: 0 -32px;
+        box-sizing: border-box;
+        height: 44px;
+        padding: 0 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 16%;
+    
+        &:first-child {
+            border-top: 1px solid grey;
+        }
+    
+        input[type="number"] {
+            height: 36%;
+            width: 10%;
+            text-align: center;
+        }
+    }
+
+    .swipe {
+        user-select: none;
+    }
+}
