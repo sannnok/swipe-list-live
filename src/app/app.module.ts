@@ -8,6 +8,7 @@ import { ShoppingCardComponent } from './views/shopping-card/shopping-card.compo
 
 // particular imports for hammer
 import * as Hammer from 'hammerjs';
+import { DraggableDirective } from './directives/draggable.directive';
 
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
@@ -18,7 +19,8 @@ export class MyHammerConfig extends HammerGestureConfig {
 @NgModule({
   declarations: [
     AppComponent,
-    ShoppingCardComponent
+    ShoppingCardComponent,
+    DraggableDirective
   ],
   imports: [
     BrowserModule,

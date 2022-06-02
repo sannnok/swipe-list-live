@@ -6,3 +6,30 @@ html, body, .main-container {
     margin: 0;
     padding: 0;
 }
+
+
+.swipe-right {
+    animation: rightswipe 250ms;
+}
+
+.swipe-left {
+    animation: leftswipe 250ms;
+}
+
+@keyframes rightswipe {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+        transform: translateX(16px);
+    }
+}
+
+@keyframes leftswipe {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-16px);
+    }
+}
